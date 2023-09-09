@@ -61,3 +61,10 @@ Nx comes with local caching already built-in (check your `nx.json`). On CI you m
 - [Join the community](https://nx.dev/community)
 - [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
 - [Follow us on Twitter](https://twitter.com/nxdevtools)
+
+
+## ROOKIE NOTES:
+- to install & build rust backend `nx build backend`
+- Build as docker container: `docker build -t kingofthehill-backend ./apps/backend`
+- Start Backend: `docker run docker/backend`
+localhost:3000/api/v1/teams

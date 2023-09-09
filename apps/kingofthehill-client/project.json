@@ -17,9 +17,20 @@
         "tsConfig": "apps/kingofthehill-client/tsconfig.app.json",
         "assets": [
           "apps/kingofthehill-client/src/favicon.ico",
-          "apps/kingofthehill-client/src/assets"
+          "apps/kingofthehill-client/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/assets",
+            "output": "assets"
+          }
         ],
-        "styles": ["apps/kingofthehill-client/src/styles.scss"],
+        "styles": [
+          "@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/kingofthehill-client/src/styles.scss"
+        ],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/theme"]
+        },
         "scripts": []
       },
       "configurations": {
@@ -56,7 +67,8 @@
           "browserTarget": "kingofthehill-client:build:production"
         },
         "development": {
-          "browserTarget": "kingofthehill-client:build:development"
+          "browserTarget": "kingofthehill-client:build:development",
+          "proxyConfig": "apps/kingofthehill-client/src/proxy.conf.json"
         }
       },
       "defaultConfiguration": "development"
